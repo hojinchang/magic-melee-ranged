@@ -7,11 +7,17 @@ function getComputerChoice() {
 
 
 function playRound(playerSelection, computerSelection) {
+    const choices = ["rock", "paper", "scissors"];
+
     playerSelection = playerSelection.toLowerCase();
 
     let declareWinner;
     let roundDecision;
 
+    if (!choices.includes(playerSelection)) {
+        return "Invalid input choice!";
+    }
+    
     if (playerSelection === computerSelection) {
         roundDecision = "tie";
     } else if (playerSelection === "rock" && computerSelection === "scissors" ||
