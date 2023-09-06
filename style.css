@@ -1,9 +1,16 @@
+body {
+    margin: 0;
+    background-color: #787878;
+}
+
 h1 {
     display:flex;
     justify-content: center;
-    gap: 60px;
+    align-content: center;
+    gap: 150px;
     margin: 0;
     padding: 40px;
+    background-color: #3B3B3B;
 }
 
 .combat-style {
