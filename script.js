@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    const choices = ["rock", "paper", "scissors"];
+    const choices = ["magic", "melee", "ranged"];
     let idxChoice = Math.floor(Math.random() * choices.length);
     
     return choices[idxChoice];
@@ -7,7 +7,7 @@ function getComputerChoice() {
 
 
 function playRound(playerSelection, computerSelection) {
-    const choices = ["rock", "paper", "scissors"];
+    const choices = ["magic", "melee", "ranged"];
 
     playerSelection = playerSelection.toLowerCase();
 
@@ -20,9 +20,9 @@ function playRound(playerSelection, computerSelection) {
     
     if (playerSelection === computerSelection) {
         roundDecision = "tie";
-    } else if (playerSelection === "rock" && computerSelection === "scissors" ||
-                playerSelection === "paper" && computerSelection == "rock" ||
-                playerSelection == "scissors" && computerSelection == "paper") {
+    } else if (playerSelection === "magic" && computerSelection === "melee" ||
+                playerSelection === "melee" && computerSelection == "magic" ||
+                playerSelection == "ranged" && computerSelection == "magic") {
 
         roundDecision = "player";
     } else {
@@ -53,7 +53,7 @@ function game() {
 
     let playerSelection, computerSelection, gameResult;
     for (let i = 0; i < 5; i++) {
-        playerSelection = prompt("Select your choice! Rock, paper, or scissors!");
+        playerSelection = prompt("Select your choice! Magic, Melee, or Ranged!");
         computerSelection = getComputerChoice();
 
         gameResult = playRound(playerSelection, computerSelection);
