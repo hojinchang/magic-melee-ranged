@@ -49,17 +49,17 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-function game() {
+// function game() {
 
-    let playerSelection, computerSelection, gameResult;
-    for (let i = 0; i < 5; i++) {
-        playerSelection = prompt("Select your choice! Magic, Melee, or Ranged!");
-        computerSelection = getComputerChoice();
+//     let playerSelection, computerSelection, gameResult;
+//     for (let i = 0; i < 5; i++) {
+//         playerSelection = prompt("Select your choice! Magic, Melee, or Ranged!");
+//         computerSelection = getComputerChoice();
 
-        gameResult = playRound(playerSelection, computerSelection);
+//         gameResult = playRound(playerSelection, computerSelection);
         
-        console.log(gameResult);
-    }
-}
+//         console.log(gameResult);
+//     }
+// }
 
-game();
+// game();
