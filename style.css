@@ -45,3 +45,16 @@ p.runescape {
 .runescape {
     font-size: 16px;
 }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.button {
+    width: 150px;
+    height: 150px;
+    border: 0px;
+    padding: 0px;
+}
