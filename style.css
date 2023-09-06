@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-color: #787878;
+    font-family: "MedievalSharp", sans-serif;
 }
 
 h1 {
@@ -11,22 +12,17 @@ h1 {
     margin: 0;
     padding: 40px;
     background-color: #3B3B3B;
-}
 
-.combat-style {
     font-size: 40px;
-    font-family: "MedievalSharp", sans-serif;
     font-weight: bolder;
 }
 
 .magic {
     color: #A7C7E7;
 }
-
 .melee {
     color: #FF6961;
 }
-
 .ranged {
     color: #b4d3b2;
 }
