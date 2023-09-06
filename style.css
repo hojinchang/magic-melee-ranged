@@ -26,3 +26,18 @@ h1 {
 .ranged {
     color: #b4d3b2;
 }
+
+p.combat-style,
+p.runescape {
+    text-align: center;
+    quotes: none;
+}
+
+.combat-style {
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+.runescape {
+    font-size: 16px;
+}
