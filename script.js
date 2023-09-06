@@ -63,3 +63,32 @@ function playRound(playerSelection, computerSelection) {
 // }
 
 // game();
+
+
+const buttons = document.querySelectorAll(".button");
+
+
+buttons.forEach(button => {
+    button.addEventListener('click', function (e) {
+        const selectedButton = e.currentTarget.classList[1];
+
+        let playerSelection;
+        switch (selectedButton) {
+            case "magic-button":
+                playerSelection = "magic";
+                break;
+            case "melee-button":
+                playerSelection = "melee";
+                break;
+            case "ranged-button":
+                playerSelection = "ranged";
+                break;
+        }
+
+
+        const computerSelection = getComputerChoice();
+        let declareWinner = playRound(playerSelection, computerSelection);
+
+        console.log(declareWinner);
+    });
+});
