@@ -1,0 +1,25 @@
+h1 {
+    display:flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 0;
+    padding: 40px;
+}
+
+.combat-style {
+    font-size: 40px;
+    font-family: "MedievalSharp", sans-serif;
+    font-weight: bolder;
+}
+
+.magic {
+    color: #A7C7E7;
+}
+
+.melee {
+    color: #FF6961;
+}
+
+.ranged {
+    color: #b4d3b2;
+}
