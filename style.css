@@ -38,8 +38,9 @@ p.runescape {
 }
 
 .combat-style {
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 50px;
+    font-weight: bold;
 }
 
 .runescape {
@@ -57,4 +58,39 @@ p.runescape {
     height: 150px;
     border: 0px;
     padding: 0px;
+}
+
+.score-board {
+    text-align: center;
+    margin-top: 60px;
+}
+.score-message {
+    margin: 0;
+}
+
+.score-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.score-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 200px;
+}
+
+.sign {
+    font-size: 80px;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+}
+
+.score {
+    font-size: 20px;
 }
