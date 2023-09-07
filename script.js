@@ -148,13 +148,15 @@ function getPlayerSelection(e) {
 
     if (playerScore === maxScore || computerScore === maxScore) {
         const gameWinner = playerScore === maxScore ? 'Player' : 'Computer';
+
         setTimeout(() => {
             alert(`${gameWinner} wins the game!`);
-        }, 10);
 
-        playerScore = 0;
-        computerScore = 0;
-        resetGame();
+            playerScore = 0;
+            computerScore = 0;
+            resetGame();
+        }, 10);
+        
     } 
     
 }
