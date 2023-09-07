@@ -127,15 +127,25 @@ function getPlayerSelection(e) {
     const selectedButton = e.currentTarget.classList[1];
 
     let playerSelection;
+    let sound;
     switch (selectedButton) {
         case "magic-button":
             playerSelection = "magic";
+            sound = document.getElementById("magic-sound");
+            sound.currentTime = 0;
+            sound.play();
             break;
         case "melee-button":
             playerSelection = "melee";
+            sound = document.getElementById("melee-sound");
+            sound.currentTime = 0;
+            sound.play();
             break;
         case "ranged-button":
             playerSelection = "ranged";
+            sound = document.getElementById("ranged-sound");
+            sound.currentTime = 0;
+            sound.play();
             break;
     }
 
