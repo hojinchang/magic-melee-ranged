@@ -60,6 +60,10 @@ p.runescape {
     padding: 0px;
 }
 
+.button-image {
+    border-style: solid;
+}
+
 .score-board {
     text-align: center;
     margin-top: 60px;
