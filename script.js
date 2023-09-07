@@ -11,7 +11,6 @@ function playRound(playerSelection, computerSelection) {
 
     playerSelection = playerSelection.toLowerCase();
 
-    let declareWinner;
     let roundDecision;
 
     if (!choices.includes(playerSelection)) {
@@ -29,23 +28,7 @@ function playRound(playerSelection, computerSelection) {
         roundDecision = "computer";
     }
 
-    playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
-
-    switch(roundDecision) {
-        case "tie":
-            declareWinner = `It's a tie! ${playerSelection} ties with ${computerSelection}!`;
-            break;
-        
-        case "player":
-            declareWinner = `You won! ${playerSelection} beats ${computerSelection}`;
-            break;
-
-        case "computer":
-            declareWinner = `You lost! ${playerSelection} loses to ${computerSelection}`;
-            break;
-    }
-
-    return declareWinner;
+   return roundDecision;
 }
 
 
@@ -65,30 +48,32 @@ function playRound(playerSelection, computerSelection) {
 // game();
 
 
+function getPlayerSelection(e) {
+    const selectedButton = e.currentTarget.classList[1];
+
+    let playerSelection;
+    switch (selectedButton) {
+        case "magic-button":
+            playerSelection = "magic";
+            break;
+        case "melee-button":
+            playerSelection = "melee";
+            break;
+        case "ranged-button":
+            playerSelection = "ranged";
+            break;
+    }
+
+    const computerSelection = getComputerChoice();
+    const decision = playRound(playerSelection, computerSelection);
+
+    
+
+    
+}
+
+
 const buttons = document.querySelectorAll(".button");
-
-
 buttons.forEach(button => {
-    button.addEventListener('click', function (e) {
-        const selectedButton = e.currentTarget.classList[1];
-
-        let playerSelection;
-        switch (selectedButton) {
-            case "magic-button":
-                playerSelection = "magic";
-                break;
-            case "melee-button":
-                playerSelection = "melee";
-                break;
-            case "ranged-button":
-                playerSelection = "ranged";
-                break;
-        }
-
-
-        const computerSelection = getComputerChoice();
-        let declareWinner = playRound(playerSelection, computerSelection);
-
-        console.log(declareWinner);
+    button.addEventListener('click', getPlayerSelection(e))
     });
-});
