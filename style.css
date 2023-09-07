@@ -73,7 +73,7 @@ p.runescape {
     justify-content: center;
     gap: 100px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .score-card {
@@ -91,6 +91,12 @@ p.runescape {
     height: 100px;
 }
 
-.score {
+.selection {
+    width: 125px;
+    height: 125px;
+}
+
+.player-score,
+.computer-score {
     font-size: 20px;
 }

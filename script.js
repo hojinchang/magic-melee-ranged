@@ -47,6 +47,39 @@ function playRound(playerSelection, computerSelection) {
 
 // game();
 
+function selectImage(selection) {
+    let imagePath;
+    switch (selection) {
+        case "magic":
+            imagePath = "./images/wizard-staff.svg";
+            break;
+        case "melee":
+            imagePath = "./images/relic-blade.svg";
+            break;
+        case "ranged":
+            imagePath = "./images/high-shot.svg";
+            break;
+    }
+    return imagePath;
+}
+
+function changeIcon(playerSelection, computerSelection) {
+    const playerImage = selectImage(playerSelection);
+    const computerImage = selectImage(computerSelection);
+
+
+    const playerIcon = document.querySelector(".player-icon");
+    playerIcon.src = playerImage;
+    playerIcon.style.borderStyle = "solid";
+    playerIcon.style.backgroundColor = "white";
+
+    const computerIcon = document.querySelector(".computer-icon");
+    computerIcon.src = computerImage;
+    computerIcon.style.borderStyle = "solid";
+    computerIcon.style.backgroundColor = "white";
+}
+
+
 
 function getPlayerSelection(e) {
     const selectedButton = e.currentTarget.classList[1];
@@ -66,6 +99,8 @@ function getPlayerSelection(e) {
 
     const computerSelection = getComputerChoice();
     const decision = playRound(playerSelection, computerSelection);
+    
+    changeIcon(playerSelection, computerSelection)
 
     console.log(decision);
     
