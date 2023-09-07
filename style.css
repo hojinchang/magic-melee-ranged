@@ -68,8 +68,16 @@ p.runescape {
     text-align: center;
     margin-top: 60px;
 }
+
+.score-status {
+    font-weight: bold;
+    font-size: 30px;
+}
+
 .score-message {
     margin: 0;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .score-container {
@@ -103,4 +111,5 @@ p.runescape {
 .player-score,
 .computer-score {
     font-size: 20px;
+    font-weight: bold;
 }

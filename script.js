@@ -21,7 +21,7 @@ function playRound(playerSelection, computerSelection) {
         roundDecision = "tie";
     } else if (playerSelection === "magic" && computerSelection === "melee" ||
                 playerSelection === "melee" && computerSelection == "magic" ||
-                playerSelection == "ranged" && computerSelection == "magic") {
+                playerSelection === "ranged" && computerSelection ==="magic") {
 
         roundDecision = "player";
     } else {
@@ -31,21 +31,6 @@ function playRound(playerSelection, computerSelection) {
    return roundDecision;
 }
 
-
-// function game() {
-
-//     let playerSelection, computerSelection, gameResult;
-//     for (let i = 0; i < 5; i++) {
-//         playerSelection = prompt("Select your choice! Magic, Melee, or Ranged!");
-//         computerSelection = getComputerChoice();
-
-//         gameResult = playRound(playerSelection, computerSelection);
-        
-//         console.log(gameResult);
-//     }
-// }
-
-// game();
 
 function selectImage(selection) {
     let imagePath;
@@ -78,10 +63,6 @@ function changeIcon(playerSelection, computerSelection) {
     computerIcon.style.backgroundColor = "white";
 }
 
-let playerScore = 0;
-let computerScore = 0;
-const maxScore = 5;
-
 
 function updateScore(decision) {
     const playerScoreMessage = document.querySelector(".player-score");
@@ -95,6 +76,35 @@ function updateScore(decision) {
         computerScoreMessage.textContent = `Computer: ${computerScore}`;
     }
 }
+
+function updateScoreBoard(playerSelection, computerSelection, decision) {
+    const scoreStatus = document.querySelector(".score-status");
+    const scoreMessage = document.querySelector(".score-message");
+
+    let decisionStatus;
+    let decisionMessage;
+    if (decision === "player") {
+        decisionStatus = "Congratz, you leveled up";
+        decisionMessage = `<span class=${playerSelection}>${playerSelection}</span> beats <span class=${computerSelection}>${computerSelection}</span>`;
+    } else if (decision === "computer") {
+        decisionStatus = "HAHA, better luck next time n00b";
+        decisionMessage = `<span class=${playerSelection}>${playerSelection}</span> loses to <span class=${computerSelection}>${computerSelection}</span>`;
+    } else {
+        decisionStatus = "It's a tie";
+        decisionMessage = `<span class=${playerSelection}>${playerSelection}</span> ties with <span class=${computerSelection}>${computerSelection}</span>`;
+    } 
+
+    scoreStatus.textContent = decisionStatus;
+    scoreMessage.innerHTML = decisionMessage;
+
+    updateScore(decision);
+}
+
+
+let playerScore = 0;
+let computerScore = 0;
+const maxScore = 5;
+
 
 function getPlayerSelection(e) {
     const selectedButton = e.currentTarget.classList[1];
@@ -113,11 +123,11 @@ function getPlayerSelection(e) {
     }
 
     const computerSelection = getComputerChoice();
-    changeIcon(playerSelection, computerSelection)
+    changeIcon(playerSelection, computerSelection);
 
     const decision = playRound(playerSelection, computerSelection);
 
-    updateScore(decision)
+    updateScoreBoard(playerSelection, computerSelection, decision);
     
 }
 
