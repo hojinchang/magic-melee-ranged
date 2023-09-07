@@ -67,13 +67,12 @@ function getPlayerSelection(e) {
     const computerSelection = getComputerChoice();
     const decision = playRound(playerSelection, computerSelection);
 
-    
-
+    console.log(decision);
     
 }
 
 
 const buttons = document.querySelectorAll(".button");
 buttons.forEach(button => {
-    button.addEventListener('click', getPlayerSelection(e))
+    button.addEventListener('click', getPlayerSelection)
     });
