@@ -67,7 +67,6 @@ function changeIcon(playerSelection, computerSelection) {
     const playerImage = selectImage(playerSelection);
     const computerImage = selectImage(computerSelection);
 
-
     const playerIcon = document.querySelector(".player-icon");
     playerIcon.src = playerImage;
     playerIcon.style.borderStyle = "solid";
@@ -79,7 +78,23 @@ function changeIcon(playerSelection, computerSelection) {
     computerIcon.style.backgroundColor = "white";
 }
 
+let playerScore = 0;
+let computerScore = 0;
+const maxScore = 5;
 
+
+function updateScore(decision) {
+    const playerScoreMessage = document.querySelector(".player-score");
+    const computerScoreMessage = document.querySelector(".computer-score");
+
+    if (decision === "player") {
+        playerScore++;
+        playerScoreMessage.textContent = `Player: ${playerScore}`;
+    } else if (decision === "computer") {
+        computerScore++;
+        computerScoreMessage.textContent = `Computer: ${computerScore}`;
+    }
+}
 
 function getPlayerSelection(e) {
     const selectedButton = e.currentTarget.classList[1];
@@ -98,11 +113,11 @@ function getPlayerSelection(e) {
     }
 
     const computerSelection = getComputerChoice();
-    const decision = playRound(playerSelection, computerSelection);
-    
     changeIcon(playerSelection, computerSelection)
 
-    console.log(decision);
+    const decision = playRound(playerSelection, computerSelection);
+
+    updateScore(decision)
     
 }
 
