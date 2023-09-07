@@ -54,13 +54,11 @@ function changeIcon(playerSelection, computerSelection) {
 
     const playerIcon = document.querySelector(".player-icon");
     playerIcon.src = playerImage;
-    playerIcon.style.borderStyle = "solid";
-    playerIcon.style.backgroundColor = "white";
+    playerIcon.classList.add("selected-icon");
 
     const computerIcon = document.querySelector(".computer-icon");
     computerIcon.src = computerImage;
-    computerIcon.style.borderStyle = "solid";
-    computerIcon.style.backgroundColor = "white";
+    computerIcon.classList.add("selected-icon");
 }
 
 
@@ -101,10 +99,29 @@ function updateScoreBoard(playerSelection, computerSelection, decision) {
 }
 
 
+function resetGame() {
+    const scoreStatus = document.querySelector(".score-status");
+    const scoreMessage = document.querySelector(".score-message");
+    const playerScoreMessage = document.querySelector(".player-score");
+    const computerScoreMessage = document.querySelector(".computer-score");
+    const playerIcon = document.querySelector(".player-icon");
+    const computerIcon = document.querySelector(".computer-icon");
+
+    scoreStatus.textContent = "Choose Your Combat Style";
+    scoreMessage.textContent = "First to win 5 rounds wins the game!";
+    playerScoreMessage.textContent = `Player: 0`;
+    computerScoreMessage.textContent = `Computer: 0`;
+    
+    const resetImagePath = "./images/question-mark-svgrepo-com.svg";
+    playerIcon.src = resetImagePath;
+    computerIcon.src = resetImagePath;
+    playerIcon.classList.remove("selected-icon");
+    computerIcon.classList.remove("selected-icon");
+}
+
 let playerScore = 0;
 let computerScore = 0;
 const maxScore = 5;
-
 
 function getPlayerSelection(e) {
     const selectedButton = e.currentTarget.classList[1];
@@ -128,6 +145,17 @@ function getPlayerSelection(e) {
     const decision = playRound(playerSelection, computerSelection);
 
     updateScoreBoard(playerSelection, computerSelection, decision);
+
+    if (playerScore === maxScore || computerScore === maxScore) {
+        const gameWinner = playerScore === maxScore ? 'Player' : 'Computer';
+        setTimeout(() => {
+            alert(`${gameWinner} wins the game!`);
+        }, 10);
+
+        playerScore = 0;
+        computerScore = 0;
+        resetGame();
+    } 
     
 }
 

@@ -113,3 +113,8 @@ p.runescape {
     font-size: 20px;
     font-weight: bold;
 }
+
+.selected-icon {
+    border-style: solid;
+    background-color: white;
+}
