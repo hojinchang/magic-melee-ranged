@@ -1,7 +1,15 @@
 body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     background-color: #787878;
     font-family: "MedievalSharp", sans-serif;
+
+    min-height:  100vh;
+}
+
+.site-content {
+    flex: 1;
 }
 
 h1 {
@@ -117,4 +125,18 @@ p.runescape {
 .selected-icon {
     border-style: solid;
     background-color: white;
+}
+
+footer {
+    background-color: #3B3B3B;
+    color: #FFFFFF;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+
+    margin-top: auto;
+}
+
+.footer-text {
+    text-align: center;
 }
