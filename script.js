@@ -36,13 +36,13 @@ function selectImage(selection) {
     let imagePath;
     switch (selection) {
         case "magic":
-            imagePath = "./images/wizard-staff.svg";
+            imagePath = "media/images/wizard-staff.svg";
             break;
         case "melee":
-            imagePath = "./images/relic-blade.svg";
+            imagePath = "media/images/relic-blade.svg";
             break;
         case "ranged":
-            imagePath = "./images/high-shot.svg";
+            imagePath = "media/images/high-shot.svg";
             break;
     }
     return imagePath;
@@ -112,7 +112,7 @@ function resetGame() {
     playerScoreMessage.textContent = `Player: 0`;
     computerScoreMessage.textContent = `Computer: 0`;
     
-    const resetImagePath = "./images/question-mark-svgrepo-com.svg";
+    const resetImagePath = "media/images/question-mark-svgrepo-com.svg";
     playerIcon.src = resetImagePath;
     computerIcon.src = resetImagePath;
     playerIcon.classList.remove("selected-icon");
@@ -156,7 +156,7 @@ function getPlayerSelection(e) {
             computerScore = 0;
             resetGame();
         }, 10);
-        
+
     } 
     
 }
