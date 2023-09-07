@@ -1,4 +1,4 @@
-# Rock Paper Scissors
+# Magic-Melee-Ranged
 
 ## About
 This is a simple implementation of a grade-school classic "rock paper scissors", with a twist!
@@ -20,4 +20,4 @@ The player will be playing against a computer opponent.
 
 ## View the Webpage
 
-View the webpage at: https://hojinchang.github.io/odin-rock-paper-scissors/
+View the webpage at: https://hojinchang.github.io/magic-melee-ranged/
