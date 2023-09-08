@@ -9,6 +9,8 @@ In this game, ```magic > melee```, ```melee > ranged```, ```ranged > magic```.
 
 These are based on **RuneScape's** combat system.
 
+Click on the combat style icons to select your choice (feat. my cute voice :blush:)
+
 The player will be playing against a computer opponent.
 
 
