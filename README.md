@@ -22,4 +22,4 @@ The player will be playing against a computer opponent.
 
 ## View the Webpage
 
-View the webpage at: https://hojinchang.github.io/magic-melee-ranged/
+View the webpage [here](https://hojinchang.github.io/magic-melee-ranged/).
