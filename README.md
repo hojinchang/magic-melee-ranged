@@ -13,13 +13,23 @@ Click on the combat style icons to select your choice (feat. my cute voice :blus
 
 The player will be playing against a computer opponent.
 
+View the webpage [here](https://hojinchang.github.io/magic-melee-ranged/).
+
+
+## Built Using
+- HTML5
+- CSS3
+- JavaScript
+- Visual Studo Code
+- Xubuntu
+
+## Features
+- JavaScript game logic
+- JavaScript event listeners for player selection
+- Fully random, AI computer opponent
+- Dynamic game UI
 
 ## What I learned
-1. How to use JavaScript to manipulate logic in a webpage.
-2. Incorporate event listeners to run JavaScript functions.
-3. Manipulate the DOM using Javascript.
-
-
-## View the Webpage
-
-View the webpage [here](https://hojinchang.github.io/magic-melee-ranged/).
+- How to use JavaScript to manipulate logic in a webpage
+- Incorporate event listeners to run JavaScript functions
+- Manipulate the DOM using Javascript
