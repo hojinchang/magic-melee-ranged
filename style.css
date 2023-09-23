@@ -143,3 +143,13 @@ footer {
 .footer-text {
     text-align: center;
 }
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
