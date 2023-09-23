@@ -59,17 +59,20 @@ p.runescape {
     display: flex;
     justify-content: center;
     gap: 50px;
+    margin-bottom: 35px;
 }
 
 .button {
-    width: 150px;
-    height: 150px;
-    border: 0px;
-    padding: 0px;
+    border: 0;
+    padding: 0;
+    box-shadow: 0 6px 8px black;
 }
 
+.button,
 .button-image {
-    border-style: solid;
+    width: 150px;
+    height: 150px;
+
 }
 
 .score-board {
